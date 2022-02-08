@@ -1,0 +1,130 @@
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --blueHover: hsla(223, 87%, 63%, 0.8);
+  --paleBlue: hsl(223, 100%, 88%);
+  --lightRed: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --veryDarkBlue: hsl(209, 33%, 12%);
+  --white: hsl(0, 0%, 100%);
+  --inputBlue: hsla(223, 87%, 63%, 0.5);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+body {
+  font-family: Libre Franklin;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.content {
+  margin-bottom: 3rem;
+}
+.content__title {
+  color: var(--gray);
+  font-weight: 400;
+  margin: 2rem 0 1rem;
+}
+.content__title span {
+  color: var(--veryDarkBlue);
+  font-weight: 700;
+}
+.form {
+  margin: 1rem 0 0;
+}
+.email {
+  padding: 0.5rem 1rem;
+  width: 70%;
+  outline: 1px solid var(--inputBlue);
+  border-radius: 2rem;
+  border: none;
+  color: var(--veryDarkBlue);
+  text-align: left;
+}
+.email::placeholder {
+  color: var(--inputBlue);
+  text-align: left;
+}
+.email:focus-visible {
+  outline: 1px solid var(--blue);
+  border: none;
+}
+.error-msg {
+  visibility: hidden;
+  color: var(--lightRed);
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.btn {
+  border: 1px solid var(--blue);
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 0.5rem;
+  border-radius: 2rem;
+  width: 70%;
+}
+.btn:focus-visible,
+.btn:hover {
+  outline: none;
+  border: transparent solid 1px;
+  background: var(--blueHover);
+  box-shadow: 0 0.5rem 1rem 0.5rem var(--gray);
+}
+.photo img {
+  width: 100%;
+  padding: 0 1rem;
+}
+footer {
+  font-size: 15px;
+}
+footer a {
+  text-decoration: none;
+}
+.social {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.5rem 0;
+}
+.social a svg path {
+  fill: var(--blue);
+}
+
+@media only screen and (min-width: 740px) {
+  body {
+    padding: 0;
+  }
+  main {
+    max-width: 640px;
+  }
+  .form {
+    display: flex;
+    align-items: center;
+  }
+  .email {
+    width: 70%;
+    margin-right: 1rem;
+    position: relative;
+  }
+  .error-msg {
+    position: absolute;
+    visibility: hidden;
+    margin-top: 4rem;
+    margin-left: 1rem;
+  }
+  .content {
+    margin: 1rem;
+  }
+
+  .btn {
+    width: 30%;
+    height: 2rem;
+    align-items: center;
+  }
+}
